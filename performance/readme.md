@@ -56,3 +56,24 @@ Details from a picture such as what device the picture was taken, camera details
 ##### The traveling delivery man
 
 Reducing the number of page requests, the number of JS libries, look for native solutions over customizable resources.
+
+##### Critical Render Path
+
+DOM > CSSOM > Render Tree > Layout > Paint
+
+Critical Render Path is the process of requesting HTML file from a server and rendering it on the screen. It is possible to optimize this process to load the webpage faster. Based on the HTML file, DOM creates a tree structure to each HMTL tag.
+
+CSS and Javascript files take high priority compared to images. To improve this process CSS has to be delivered first and Javascript has to be delivered as late as possible. It means style tags at the top and script tags at the bottom.
+
+- HTML
+> Load style tag in the head
+> Load script tag right before </body>
+- CSS
+> Load when the user needs that code. For example, scroll loading
+> Use media attributes which are used to load according to device
+> Don't use long chains of CSS specification
+- JS
+> Load scripts which are not essencial to user experience (changes DOM or CSS-DOM) asynchronously with tag `<script async>`
+> Defer loading of scripts which aren't very important to the website `<script defer>`
+> Minimize DOM manipulation is relevant due to critical render path. Once the browser starts downloading the javascript files, it has to check if there is any code to be executed. If it has, it stops to execute the code within the file and then it continues running.
+> Avoid long running javascript because it sometimes blocks the page
