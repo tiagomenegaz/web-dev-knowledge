@@ -77,3 +77,27 @@ CSS and Javascript files take high priority compared to images. To improve this 
 > Defer loading of scripts which aren't very important to the website `<script defer>`
 > Minimize DOM manipulation is relevant due to critical render path. Once the browser starts downloading the javascript files, it has to check if there is any code to be executed. If it has, it stops to execute the code within the file and then it continues running.
 > Avoid long running javascript because it sometimes blocks the page
+
+##### Resources
+
+https://css-tricks.com/prefetching-preloading-prebrowsing/
+
+http://optimizilla.com/
+
+https://tools.pingdom.com/
+
+https://www.thinkwithgoogle.com/feature/mobile/
+
+https://developers.google.com/web/tools/lighthouse/
+
+http://websitespeedranker.com/
+
+https://pageweight.imgix.com/
+
+https://developers.google.com/speed/pagespeed/insights/
+
+https://passmarked.com/
+
+https://images.guide/
+
+https://www.crazyegg.com/blog/image-editing-tools/
